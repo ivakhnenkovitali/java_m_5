@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: service-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_CLIENT_URL}
+management:
+  endpoint:
+    prometheus:
+      enabled: true
+    metrics:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  prometheus:
+    metrics:
+      export:
+        enabled: true
